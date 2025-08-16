@@ -27,7 +27,7 @@ const chartConfig = {
 } satisfies ChartConfig
 
 const Dashboard = () => {
-  const { role, token } = useContext(AuthContext) as AuthContextProps
+  const { role } = useContext(AuthContext) as AuthContextProps
   
   const navigate = useNavigate()
 
@@ -35,7 +35,7 @@ const Dashboard = () => {
     if (role !== "instructor") {
       navigate("/")
     }
-  }, [token])
+  }, [])
 
   return (
     <div className="min-h-screen bg-[linear-gradient(to_right,_#ede9fe_1px,_transparent_1px),_linear-gradient(to_bottom,_#ede9fe_1px,_transparent_1px)] [background-size:40px_40px]">
