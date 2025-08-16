@@ -13,7 +13,7 @@ export default function OAuthCallback() {
 
     if (code) {
       axios
-        .get(`http://localhost:3000/api/v1/user/oauth/google?code=${code}`)
+        .get(`${import.meta.env.VITE_BACKEND_URL}/user/oauth/google?code=${code}`)
         .then(_ => {
           fetchUser();
           navigate("/");

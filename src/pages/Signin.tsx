@@ -40,7 +40,7 @@ const Signin = () => {
         const googleAuthUrl = "https://accounts.google.com/o/oauth2/v2/auth";
         const queryParams = new URLSearchParams({
             client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
-            redirect_uri: "http://localhost:5173/oauth/callback",
+            redirect_uri: import.meta.env.VITE_REDIRECT_URI,
             response_type: "code",
             scope: "openid email profile",
             access_type: "offline",
