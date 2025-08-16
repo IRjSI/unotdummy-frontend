@@ -70,10 +70,10 @@ const Signup = () => {
                 </h1>
             </div>
 
-            <section className="container mx-auto flex flex-col items-center justify-center">
+            <section className="container mx-auto flex flex-col items-center justify-center p-4">
 
-                <div className="max-w-lg w-full">
-                    <button className="flex w-full items-center justify-center gap-3 px-4 py-3 bg-violet-600 border border-r-4 border-b-4 rounded-xl border-white text-white font-medium transition-all duration-300" onClick={handleOAuth}>
+                <div className="max-w-xl w-full">
+                    <button className="flex w-full items-center justify-center gap-3 px-4 py-3 bg-violet-600 border border-r-4 border-b-4 rounded-xl border-white text-white font-medium transition-all duration-300 cursor-pointer" onClick={handleOAuth}>
                         <svg className="w-5 h-5" viewBox="0 0 24 24">
                         <path fill="white" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                         <path fill="white" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -84,13 +84,13 @@ const Signup = () => {
                     </button>
                 </div>
 
-                <div className="w-full max-w-lg flex items-center my-4">
+                <div className="w-full max-w-xl flex items-center my-4">
                     <div className="flex-1 h-[2px] bg-gray-300"></div>
                     <span className="px-4 text-gray-500 text-sm font-medium">OR</span>
                     <div className="flex-1 h-[2px] bg-gray-300"></div>
                 </div>
 
-                <form className="text-violet-950 flex flex-col items-center justify-center space-y-4 bg-white/50 rounded-xl border max-w-lg p-16 border-b-4 border-r-4 border-violet-300 w-full" onSubmit={submitHandler}>
+                <form className="text-violet-950 flex flex-col items-center justify-center space-y-4 bg-white/50 rounded-xl border max-w-xl p-16 border-b-4 border-r-4 border-violet-300 w-full" onSubmit={submitHandler}>
 
                     <div className="w-full">
                         <label htmlFor="name" className="block text-sm font-semibold mb-2">Name</label>
@@ -167,7 +167,7 @@ const Signup = () => {
                     <div className="w-full">
                         <div className="group">
                             <button 
-                                className="flex items-center justify-center gap-2 py-4 px-6 w-full font-semibold text-lg bg-gradient-to-r hover:scale-105 transition-all duration-300 border-b-4 border-r-4 from-violet-600 via-violet-500 to-violet-600 rounded-xl"
+                                className="flex items-center justify-center gap-2 py-4 px-6 w-full font-semibold text-lg bg-gradient-to-r hover:scale-105 transition-all duration-300 border-b-4 border-r-4 border-violet-950 from-violet-600 via-violet-500 to-violet-600 rounded-xl"
                                 type="submit"
                             >
                                 {loading ? "Wait..." : "Next"}

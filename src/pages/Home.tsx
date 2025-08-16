@@ -205,6 +205,12 @@ const Home = () => {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
+
+          <div className="text-center underline">
+            <Link to={"/courses"}>
+              view more
+            </Link>
+          </div>
         </div>
       </section>
 

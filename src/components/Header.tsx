@@ -62,7 +62,7 @@ const Header = () => {
           ))
           }
 
-          {data?.role === "instructor" ? (<DropdownMenu>
+          {isLoggedIn && (data?.role === "instructor" ? (<DropdownMenu>
             <DropdownMenuTrigger>
               <div className="flex items-center gap-1 cursor-pointer text-violet-950 hover:text-violet-700 transition-colors">
                 <BriefcaseBusiness size={20} />
@@ -99,7 +99,7 @@ const Header = () => {
               <BriefcaseBusiness size={20} />
               <span className="hidden sm:inline">Enrolled Courses</span>
             </NavLink>
-          )
+          ))
           }
 
 

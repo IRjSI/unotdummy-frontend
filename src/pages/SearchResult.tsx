@@ -1,7 +1,8 @@
-import { ChevronLeft, Clock, DollarSign, Settings2, TrendingUp, User2 } from "lucide-react"
-import { useLocation, useNavigate } from "react-router-dom"
+import { ChevronLeft, Clock, DollarSign, Settings2, TrendingUp } from "lucide-react"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 
 interface ICourse {
+    _id: string,
     title: string,
     description: string,
     thumbnail: string,
@@ -74,9 +75,8 @@ const SearchResult = () => {
                                     </div>
                                 </div>
                                 
-                                <div className="flex items-center gap-4">
-                                    <User2 size={16} className="" />
-                                    <div className="flex items-center gap-1">
+                                <div className="flex items-center justify-between gap-1 w-full">
+                                    <div className="flex items-center gap-2">
                                         <div className="w-6 text-violet-950 rounded-xl">
                                             <img src={course.instructor.avatar} className="w-full h-full rounded-full" alt="sdsd" />
                                         </div>
@@ -86,6 +86,9 @@ const SearchResult = () => {
                                             </span>
                                         </div>
                                     </div>
+                                    <Link to={`/course/${course._id}`} className="p-2 rounded-xl bg-violet-500 text-white cursor-pointer">
+                                        View Course
+                                    </Link>
                                 </div>
                             </div>
                         ))

@@ -1,8 +1,10 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
 const ResetPasswordForm = ({ token }: { token: string }) => {
+  const navigate = useNavigate();
+
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
@@ -13,7 +15,9 @@ const ResetPasswordForm = ({ token }: { token: string }) => {
     try {
         const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/user/reset-password/${token}`, { password })
         if (!res.data.success) {
-            setError("Something went wrong, try again")
+          setError("Something went wrong, try again")
+        } else {
+          navigate("/profile")
         }
     } catch (error: any) {
         setError(error.response.data.message)
