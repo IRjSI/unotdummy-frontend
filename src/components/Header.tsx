@@ -31,7 +31,7 @@ const Header = () => {
     
   }, [])
   
-  if (loading) return <div>loading...</div>
+  if (!isLoggedIn && loading) return null;
 
   return (
     <header className="bg-violet-300/20 border-b border-violet-300">
