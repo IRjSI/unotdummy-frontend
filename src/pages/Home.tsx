@@ -11,6 +11,21 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { AuthContext, type AuthContextProps } from "@/context/AuthContext"
+import Autoplay from "embla-carousel-autoplay"
+
+export function Example() {
+  return (
+    <Carousel
+      plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}
+    >
+      // ...
+    </Carousel>
+  )
+}
 
 interface ICourse {
   _id: string,
@@ -155,7 +170,14 @@ const Home = () => {
             <p className="text-xl text-gray-600">Discover our most popular and highly-rated courses</p>
           </div>
 
-          <Carousel className="max-w-6xl mx-auto">
+          <Carousel
+            className="max-w-6xl mx-auto"
+            plugins={[
+              Autoplay({
+                delay: 200,
+              }),
+            ]}
+          >
             <CarouselContent>
               {courses.map((course) => (
                 <CarouselItem key={course._id} className="flex items-center justify-center">
